@@ -9,8 +9,6 @@ CREATE TABLE teams (
     
     -- Basic stats
     points_per_game DECIMAL(4,1),
-    rebounds_per_game DECIMAL(4,1),
-    assists_per_game DECIMAL(4,1),
     points_allowed_per_game DECIMAL(4,1),
     
     -- Advanced metrics
