@@ -7,7 +7,7 @@ INSERT INTO players (first_name, last_name, team_id, experience, height, weight_
 ('Dorian', 'Finney-Smith', 21, 7, '6-7', 220, 'Right'),
 ('Rui', 'Hachimura', 21, 5, '6-8', 230, 'Right'),
 ('Gabe', 'Vincent', 21, 5, '6-2', 200, 'Right'),
-('Jarred', 'Vanderbilt', 21, 6, '6-8', 214, 'Right'),
+('Jarred', 'Vanderbilt', 21, 6, '6-8', 214, 'Left'),
 ('Jaxson', 'Hayes', 21, 5, '7-0', 220, 'Right'),
 ('Dalton', 'Knecht', 21, 0, '6-6', 215, 'Right'),
 ('Cam', 'Reddish', 21, 5, '6-7', 230, 'Right'),
