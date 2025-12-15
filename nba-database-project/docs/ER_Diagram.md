@@ -1,36 +1,40 @@
 ## Entities and Relationships
 ---
-conferences (1) ---< (many) divisions (1) ---< (many) teams (1) ---< (many) players  
-| |  
-| (1) coaches  
-|  
-(many) teams ---< (many) player_stats
-
+conferences (1) ---< divisions (many)
+     |
+     v
+divisions (1) ---< TEAMS (many)
+     |
+     +---< PLAYERS (many) ---< PLAYER_STATS (many)
+     |
+     +---< COACHES (1) [one-to-one]
+     |
+     +---< PLAYER_STATS (indirectly through players)
 
 ## Entity Details:
 ---
-### conferences
+### conferences (1) ───< divisions (many)
 - conference_id (PK)
 - conference_name (Eastern, Western)
 
-### divisions  
+### divisions (1) ───< teams (many)
 - division_id (PK)
 - division_name (Atlantic, Pacific, etc.)
 - conference_id (FK → conferences)
 
-### teams
+### teams ───< players (many)
 - team_id (PK)
 - team_name
 - city
 - division_id (FK → divisions)
 - wins, losses, stats...
 
-### coaches
+### coaches ───> teams(1) (One team has one current coach)
 - coach_id (PK)
 - first_name, last_name
 - team_id (FK → teams)
 
-### players
+### players (1) ───< player_stats (many)
 - player_id (PK)
 - first_name, last_name
 - team_id (FK → teams)
